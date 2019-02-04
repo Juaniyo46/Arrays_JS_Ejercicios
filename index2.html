@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var texto = prompt("Introduzca un texto");
+		
+
+		function quitEsp(texto) {
+			var sinEsp = "";
+			for (var i = 0; i < texto.length; i++) {
+			if (texto[i] == " ") {
+
+			} else {
+				sinEsp = sinEsp + texto.charAt(i);
+			}
+		}
+		return sinEsp;
+		}
+
+
+		function invertirCadena(sinEsp) {
+			var longitud = sinEsp.length;
+			var invertida = "";
+			while (longitud >= 0) {
+				invertida = invertida + sinEsp.charAt(longitud - 1);
+				longitud--;
+				
+			}
+			return invertida;
+		}
+
+
+		function palidromo (sinEsp,invertida) {
+			var isPalindromo = false;
+			if (sinEsp == invertida) {isPalindromo = true}
+			else{isPalindromo = false};
+
+			return isPalindromo;
+		}
+
+		document.write(palidromo(quitEsp(texto), invertirCadena(quitEsp(texto))));
+
+		
+		
+
+
+	</script>
+</body>
+</html>
