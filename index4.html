@@ -8,12 +8,36 @@
 	<script type="text/javascript">
 		var valores = [true, 5, false, "hola", "adios", 2];
 		
+		// Apartado 1
+		if (valores[3].length > valores[4].length) {alert("'hola' es el mayor")}
+		else if (valores[3].length < valores[4].length) {alert("'adios' es el mayor")}
+		else if (valores[3].length == valores[4].length) {alert("Los dos textos son iguales.")}
+
+		//Apartado 2
+		verdadero = valores[0];
+		falso = valores[2];
+		verdad = verdadero || falso;
+		alert(verdad);
+		negado = verdadero && falso;
+		alert(negado);
+
+		//Apartado 3
+		numero1 = valores[1];
+		numero2 = valores[5];
+		suma = numero1 + numero2;
+		alert(suma);
+		resta = numero1 - numero2;
+		alert(resta);
+		division = numero1 / numero2;
+		alert(division);
+		multiplicacion = numero1 * numero2;
+		alert(multiplicacion);
+		restoDiv = numero1 % numero2;
+		alert(restoDiv);
 
 
-		function extraer (valores) {
-			
-		}
-
+		
+		
 	</script>
 </body>
 </html>

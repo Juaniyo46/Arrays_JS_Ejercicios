@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio 5</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var numero = parseInt(prompt("Introduzca un número antero"));
+		var factorial = 1;
+
+		if (isNaN(numero)) {document.write("El número introducido no es correcto");}
+		else {
+			var i;
+			for (i = 1; i <= numero; i++) {
+				factorial = factorial * i;
+			}
+			document.write(factorial);
+		}
+	</script>
+</body>
+</html>
