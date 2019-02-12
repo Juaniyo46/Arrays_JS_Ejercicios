@@ -14,19 +14,29 @@
 		// Hacemos el array con las 100 tiradas
 		for (var i = 0; i < 100; i++) {
 			dado1 = Math.floor((Math.random() * 6) + 1);
-			alert(dado1);
 			dado2 = Math.floor((Math.random() * 6) + 1);
-			alert
 			var suma = dado1 + dado2;
 			resultado.push(suma);
 		}
 
 		//Número que mas veces se repite.
+		var masRep;
 		for (var i = 0; i < resultado.length; i++) {
 ;
-			//alert(resultado[i])
+			for (var j = i + 1; j < resultado.length; j++) {
+				if (resultado[i] == resultado[j]) { masRep = resultado[i];}
+			}
 			
 		}
+		document.write("El número que mas se repite es: " + masRep + "<br>");
+
+		//Calculo de numero mayor del array
+		var numMayor = Math.max.apply(null, resultado);
+		document.write("El número mayor del array es: " + numMayor + "<br>");
+
+		//Calculo de numero menor del array
+		var numMenor = Math.min.apply(null, resultado);
+		document.write("El número menor del array es: " + numMenor + "<br>");
 
 		document.write(resultado);
 
